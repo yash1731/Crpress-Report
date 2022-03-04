@@ -1,3 +1,10 @@
+
+context('Actions', () => {
+    beforeEach(() => {
+      cy.visit('http://automationpractice.com/index.php')
+    })
+
+
 describe('Proceed to checkout Test', function(){   
 
     it('Verify checkout page', function(){
@@ -29,3 +36,4 @@ describe('Proceed to checkout Test', function(){
       })
      })  
    })
+})
