@@ -5,7 +5,7 @@
         "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
     },
     "devDependencies": {
-        "cypress": "^4.12.1",
+        "cypress": "^9.5.1",
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.1.0",
         "mochawesome-report-generator": "^5.1.0"
