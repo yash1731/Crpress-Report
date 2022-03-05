@@ -15,10 +15,8 @@ describe('Basic Desktop Tests', () =>{
 
       // verify product page
       cy.contains('Women').should('exist')
-      cy.contains('Women').should('have.text','Women')        
-      cy.get('div')
+      cy.contains('Women').should('have.text','Women')     
       cy.get('#homefeatured > .first-in-line.first-item-of-tablet-line > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click()
-
       cy.get('.button-medium > span').click() 
       cy.get('.cart_navigation > .button > span').click()
 
@@ -47,7 +45,5 @@ describe('Basic Desktop Tests', () =>{
       cy.contains('Yashpal DEWANGAN').should('exist')
 
       })      
-
-  })   
-  
+   })   
 })
