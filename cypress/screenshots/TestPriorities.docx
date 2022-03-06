@@ -1,0 +1,31 @@
+Test to automate
+You may create an account beforehand using dummy data and use this within the test to log in
+
+1.	Hover the Dresses tab and click Summer dresses
+2.	Change the view of the products to List view
+3.	Add the product to the cart
+4.	Proceed to checkout
+5.	Increase the quantity to two dresses
+6.	Log in using your account
+7.	Confirm address and confirm shipping
+8.	Print to console the following info: Name of product and the price
+
+Scenario 1:
+From the above scenarios, I priortise 'Proceed to checkout' scenario as the first to automate. 
+'Proceed to checkout' scenario also covers 'Add the product to the cart' scenario. From my experience, adding product to the cart and proceed to checkout are the most important features so that in future user can checkout successfully when payment system is established.
+Above scenario also includes other scenarios such as 'Login to an account', 'Confirm address' and 'Confirm shipping'.
+However I have noticed that there is an error occuring while automating the above end to end scenario. 
+I have successfully created the account but when trying to login after proceeding the checkout it says "Unauthorised". On top of it I was getting 404 error whilst building the automation test framework.
+
+Scenario 2:
+In addition to the above high priority scenario, I choose to automate the trivial scenario 'Hover the Dresses tab and click Summer dresses'.
+
+Output from the test run:
+
+•	Test results report generated. I have added your email address to view cypress dashboard profile, link attached here https://dashboard.cypress.io/invitation/668a4fc2-b4c9-4f16-8250-a13420caf9c3
+
+•	Build Instructions are added in the README.md file.
+
+•	Can run test in different browsers
+
+•	CI/CD pipeline instructions are added in README.md file.

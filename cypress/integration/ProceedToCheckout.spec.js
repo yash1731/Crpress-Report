@@ -1,15 +1,15 @@
 
 /// <reference types="cypress" />
 
-describe('Basic Desktop Tests', () =>{
+describe('Proceed to Checkout Tests', () =>{
 
   beforeEach( () => {
-      cy.fixture('example').then((user) => {
+      cy.fixture('example').then((user) => {        
       cy.visit(user.url)  
     })   
   })
 
-  it('Test checkout page', () => {
+  it('Add product to cart & sign in before checkout', () => {
       //cy.viewport(1280,720)
       //cy.viewport('ipad-2')     
 
@@ -31,7 +31,7 @@ describe('Basic Desktop Tests', () =>{
             
   })
 
-  it('Log in page test', () => {
+  it('Verify log in page', () => {
 
       cy.fixture('example').then((user) => {
       cy.get('.login').click()
@@ -43,7 +43,23 @@ describe('Basic Desktop Tests', () =>{
       cy.get('#passwd').type(user.password)
       cy.get('#SubmitLogin > span').click()
       cy.contains('Yashpal DEWANGAN').should('exist')
+       
+      cy.contains('Women').click()
+      cy.get('.product_list > :nth-child(1)').click()
+      cy.contains('Add to cart').click()
+      cy.contains('Proceed to checkout').click()
+      cy.get('footer').scrollIntoView({ duration: 1000 })
+      cy.get('.cart_navigation > .button > span').click()
+      cy.get('footer').scrollIntoView({ duration: 1000 })
+      cy.get('.cart_navigation > .button > span').click()
+      cy.get('footer').scrollIntoView({ duration: 1000 })
+      cy.get('#cgv').click()
+      cy.get('.cart_navigation > .button > span').click()  
+      
+        // verify page url
+         
+      cy.url().should('include','multi-shipping=') 
 
-      })      
+       })      
    })   
 })
