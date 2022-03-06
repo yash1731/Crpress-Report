@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-06T11:33:16.886Z",
+    "end": "2022-03-06T11:33:31.281Z",
+    "duration": 14395,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b6b9f21b-2d0d-435c-89da-2808d1abdf48",
+      "title": "",
+      "fullFile": "cypress/integration/ClickSummerDress.spec.js",
+      "file": "cypress/integration/ClickSummerDress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c10c3602-6b11-4874-8671-748ca59373bd",
+          "title": "Basic Desktop Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click Summer Dress Test",
+              "fullTitle": "Basic Desktop Tests Click Summer Dress Test",
+              "timedOut": null,
+              "duration": 11226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/ClickSummerDress.spec.js.mp4\"",
+              "code": "cy.get('.sf-menu > :nth-child(2) > .sf-with-ul').click();\ncy.get('.block_content > .tree > .last > a').click();\ncy.contains('Summer Dresses').should('exist');",
+              "err": {},
+              "uuid": "c6294a9a-a4bc-4a36-ae93-c1c8761330f1",
+              "parentUUID": "c10c3602-6b11-4874-8671-748ca59373bd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c6294a9a-a4bc-4a36-ae93-c1c8761330f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

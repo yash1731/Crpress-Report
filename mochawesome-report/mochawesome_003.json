@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-06T11:33:40.937Z",
+    "end": "2022-03-06T11:34:02.481Z",
+    "duration": 21544,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "af4015b7-836f-43a4-a283-1bb678c9d642",
+      "title": "",
+      "fullFile": "cypress/integration/ProceedToCheckout.spec.js",
+      "file": "cypress/integration/ProceedToCheckout.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30da020f-1a39-4e63-b18a-4adc961bb46c",
+          "title": "Basic Desktop Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test checkout page",
+              "fullTitle": "Basic Desktop Tests Test checkout page",
+              "timedOut": null,
+              "duration": 11245,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/ProceedToCheckout.spec.js.mp4\"",
+              "code": "//cy.viewport(1280,720)\n//cy.viewport('ipad-2')     \n// verify product page\ncy.contains('Women').should('exist');\ncy.contains('Women').should('have.text', 'Women');\ncy.get('#homefeatured > .first-in-line.first-item-of-tablet-line > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span').click();\ncy.get('.button-medium > span').click();\ncy.get('.cart_navigation > .button > span').click(); // verify page url\ncy.url().should('include', 'order'); // verify page and links\ncy.contains('Authentication').should('exist');\ncy.contains('Create an account').should('exist');\ncy.contains('Sign in').should('exist');\ncy.get('#SubmitLogin > span').click();",
+              "err": {},
+              "uuid": "91224b01-8980-4d82-aee7-ff4432efd6ff",
+              "parentUUID": "30da020f-1a39-4e63-b18a-4adc961bb46c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Log in page test",
+              "fullTitle": "Basic Desktop Tests Log in page test",
+              "timedOut": null,
+              "duration": 6752,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/ProceedToCheckout.spec.js.mp4\"",
+              "code": "cy.fixture('example').then(user => {\n  cy.get('.login').click(); // verify page and links\n  cy.url().should('include', 'my-account');\n  cy.get('#email').type(user.email);\n  cy.get('#passwd').type(user.password);\n  cy.get('#SubmitLogin > span').click();\n  cy.contains('Yashpal DEWANGAN').should('exist');\n});",
+              "err": {},
+              "uuid": "e77fc1d5-4a4e-42ed-9aec-d03c2d5acd04",
+              "parentUUID": "30da020f-1a39-4e63-b18a-4adc961bb46c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "91224b01-8980-4d82-aee7-ff4432efd6ff",
+            "e77fc1d5-4a4e-42ed-9aec-d03c2d5acd04"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17997,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
