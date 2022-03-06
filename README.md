@@ -47,5 +47,15 @@ Run the Cypress tests within our GitHub repository within Electron.
 ## Testing in Chrome and Firefox with Cypress Docker Images
 GitHub Actions provides the option to specify a container image for the job. Cypress offers various Docker Images for running Cypress locally and in CI.
 
+## Using the Cypress Dashboard with GitHub Actions
 
+GitHub Actions configuration with Cypress Dashboard we can leverage three useful features - 
+
+1. Recording test results with the record: true option to the Cypress Dashboard
+2. In-depth and shareable test reports.
+3. Visibility into test failures via quick access to error messages, stack traces, screenshots, videos, and contextual details.
+
+## Links to see GitHub Actions pages build deployment test report
+
+https://yash1731.github.io/Cypress-Report/
 
