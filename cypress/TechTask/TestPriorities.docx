@@ -29,3 +29,15 @@ Output from the test run:
 •	Can run test in different browsers
 
 •	CI/CD pipeline instructions are added in README.md file.
+
+
+## Part 2: API Tests
+
+I completed all api task with the postman, added tests for all responses. I am sending postman collection through file upload link.
+
+Step to run postman collection from the command line -
+ 
+ 1. Installing Newman on Windows - npm install -g newman
+ 2. verify installation - newman --version
+ 3. Run collection - newman run API_Test.postman_collection.json
+ 4. Generate html extra report - newman run https://www.getpostman.com/collections/5d7436ef90a5c6cff2f6 --reporters cli,htmlextra
