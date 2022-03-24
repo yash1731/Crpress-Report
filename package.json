@@ -2,9 +2,11 @@
     "scripts": {
         "test:chrome": "cypress run --browser chrome",
         "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
-        "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+        "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
+        "cypress:open": "cypress open"
     },
     "devDependencies": {
+        "@applitools/eyes-cypress": "^3.25.1",
         "cypress": "^9.5.1",
         "mochawesome": "^6.1.1",
         "mochawesome-merge": "^4.1.0",

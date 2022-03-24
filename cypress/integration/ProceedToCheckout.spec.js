@@ -6,6 +6,11 @@ describe('Proceed to Checkout Tests', () =>{
   beforeEach( () => {
       cy.fixture('example').then((user) => {        
       cy.visit(user.url)  
+
+      cy.eyesOpen({
+        appName: 'test home page',
+        testName: 'login test',
+      })
     })   
   })
 
@@ -28,6 +33,8 @@ describe('Proceed to Checkout Tests', () =>{
       cy.contains('Create an account').should('exist')
       cy.contains('Sign in').should('exist')
       cy.get('#SubmitLogin > span').click()
+
+      
             
   })
 
@@ -36,6 +43,12 @@ describe('Proceed to Checkout Tests', () =>{
       cy.fixture('example').then((user) => {
       cy.get('.login').click()
 
+      cy.eyesCheckWindow({
+        tag: "Login Window",
+        target: 'window',
+        fully: true
+    });
+
        // verify page and links
        
       cy.url().should('include','my-account')       
@@ -43,7 +56,17 @@ describe('Proceed to Checkout Tests', () =>{
       cy.get('#passwd').type(user.password)
       cy.get('#SubmitLogin > span').click()
       cy.contains('Yashpal DEWANGAN').should('exist')
+
+      cy.eyesCheckWindow({
+        tag: "App Window",
+        target: 'window',
+        fully: true
+    });
        
+
+    cy.eyesClose()
+
+
       cy.contains('Women').click()
       cy.get('.product_list > :nth-child(1)').click()
       cy.contains('Add to cart').click()
