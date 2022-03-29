@@ -1,8 +1,11 @@
 /// <reference types="cypress" />
 
-describe('home pahe test', () =>{
-    it('shopping test', () =>{
-        cy.visit('https://www.klarna.com/uk/')   
+describe('home page test', () =>{
+
+    beforeEach( () => {
+        cy.visit('https://www.klarna.com/uk/')  
+    })
+    it('shopping test', () =>{       
 
         cy.get('#onetrust-accept-btn-handler').click()
         cy.get('.announcement__dismiss > svg').click()
@@ -17,7 +20,13 @@ describe('home pahe test', () =>{
         cy.contains('Privacy Policy').should('exist')
         cy.contains('Terms').should('exist')
 
+    })
 
-
+    it('login test', () =>{
+        cy.get('#onetrust-accept-btn-handler').click()
+        cy.get('.announcement__dismiss > svg').click()
+        cy.get('.ab-close').click()
+        
+        cy.contains('Log in').click()
     })
 })
